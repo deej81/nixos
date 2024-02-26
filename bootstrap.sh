@@ -5,7 +5,7 @@
 
 # Prompt for GitHub username
 echo "Please enter your GitHub username:"
-read GITHUB_USERNAME
+read GITHUB_USERNAME < /dev/tty
 
 # Store the username in a variable (already done by the read command)
 echo "adding keys for: $GITHUB_USERNAME"
@@ -24,5 +24,5 @@ sudo curl -L https://raw.githubusercontent.com/deej81/nixos/main/bootstrap/boots
 sudo sed -i 's/imports = \[/imports = \[ .\/bootstrap.nix/' /etc/nixos/configuration.nix
 
 # rebuild
-sudo nixos-rebuild switch
+sudo nixos-rebuild switch < /dev/tty
 
