@@ -17,6 +17,8 @@ chmod 600 ~/.ssh/authorized_keys
 
 echo "SSH keys for GitHub user ${GITHUB_USERNAME} have been added to authorized_keys."
 
+
+
 # download our config
 sudo curl -L https://raw.githubusercontent.com/deej81/nixos/main/bootstrap/bootstrap.nix -o /etc/nixos/bootstrap.nix
 
