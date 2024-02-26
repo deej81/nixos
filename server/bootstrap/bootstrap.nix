@@ -5,14 +5,8 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./configuration.nix
-    ];
-
   # Enable the OpenSSH daemon.
   services.openssh = {
     enable = true;
   };
-
 }
