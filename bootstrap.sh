@@ -20,7 +20,7 @@ echo "SSH keys for GitHub user ${GITHUB_USERNAME} have been added to authorized_
 
 
 # download our config
-sudo curl -L https://raw.githubusercontent.com/deej81/nixos/main/bootstrap/bootstrap.nix -o /etc/nixos/bootstrap.nix
+sudo curl -L https://raw.githubusercontent.com/deej81/nixos/main/server/bootstrap/bootstrap.nix -o /etc/nixos/bootstrap.nix
 
 # add bootstrapping to existing configuration.nix imports ./bootstrap.nix
 sudo sed -i 's/imports = \[/imports = \[ .\/bootstrap.nix/' /etc/nixos/configuration.nix
